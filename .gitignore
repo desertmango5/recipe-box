@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+npm-debug.log
+.idea
+variables.env
+variables.env.now
+dist
+tmp
+.eslintrc.json
+*.log
+haters/
