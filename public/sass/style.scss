@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Changa');
+
+body {
+  font: {
+    size: 10px;
+  }
+  margin: 0;
+  background-color: #eee;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem;
+  background: linear-gradient(270deg, palevioletred, #ccc, violet);
+}
+
+.header > .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 10px #777;
+}
+
+h1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  font: {
+    size: 6rem;
+    family: 'Changa', sans-serif;
+  }
+  color: #6A5ACD;
+  text-shadow: 2px 2px 8px  #fff;
+}

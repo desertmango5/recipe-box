@@ -5,7 +5,9 @@
   "main": "start.js",
   "scripts": {
     "start": "node ./start.js",
-    "watch": "nodemon ./start.js --ignore public/"
+    "watch": "nodemon ./start.js --ignore public/",
+    "dev": "concurrently \"npm run watch\" \"npm run assets\" --names --prefix name",
+    "assets": "webpack -w --display-max-modules 0"
   },
   "author": "Michael Manges <michael.manges@gmail.com>",
   "license": "ISC",
@@ -26,7 +28,9 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.1",
     "postcss-loader": "^2.0.9",
