@@ -1,4 +1,7 @@
 exports.homePage = (req, res) => {
-  console.log('req.name');
   res.render('index', { title: 'Home' });
+};
+
+exports.newRecipe = (req, res) => {
+  res.render('newRecipe', { title: 'New Recipe' });
 };

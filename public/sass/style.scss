@@ -1,35 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Changa');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
   font: {
     size: 10px;
+    family: 'Lato', sans-serif;
   }
   margin: 0;
   background-color: #eee;
+  background-image: url("https://res.cloudinary.com/djsqo4kys/image/upload/c_scale,f_auto,q_auto,w_1500/v1512119550/kitchen-bg_pfgsox.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+  height: 100vh;
 }
 
-/* HEADER */
-.header {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15rem;
-  background: linear-gradient(270deg, palevioletred, #ccc, violet);
-}
-
-.header > .content {
+/* SITE MENU */
+.menu {
   display: flex;
-  justify-content: center;
+  height: 8rem;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 2px 8px #333;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 10px #777;
 }
 
-h1 {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
+.menu .site-title {
+  margin: 0;
+  padding: {
+    left: 1rem;
+  }
   font: {
-    size: 6rem;
+    size: 4rem;
     family: 'Changa', sans-serif;
   }
-  color: #6A5ACD;
-  text-shadow: 2px 2px 8px  #fff;
+  color: #ccc;
+  text-shadow: 2px 2px 5px  #6A5ACD;
 }
+
+.menu > a {
+  color: #ccc;
+  padding: {
+    right: 3rem;
+  }
+  font: {
+    size: 2rem;
+    weight: 100;
+  }
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+/* INDEX */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.welcome h2 {
+  font: {
+    size: 8rem;
+  }
+  color: #444;
+}
+
+/* NEW RECIPE PAGE */

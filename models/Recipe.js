@@ -8,20 +8,14 @@ const mongodbErrorHandler = require('mongoose-mongodb-errors');
 const recipeSchema = new Schema({
   title: {
     type: String,
-    unique: true,
-    trim: true,
     required: 'Please give your recipe a title',
   },
   ingredients: {
     type: String,
-    unique: false,
-    trim: true,
     required: 'Your recipe needs some ingredients',
   },
   directions: {
     type: String,
-    unique: false,
-    trim: true,
     required: 'Don\'t forget the cooking instructions!',
   },
 });
