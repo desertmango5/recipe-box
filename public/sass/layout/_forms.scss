@@ -1,0 +1,26 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-title {
+  width: 75vw;
+  height: 75vh;
+  background-color: $form-bg-color;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-title h3 {
+  font: {
+    size: 2rem;
+    weight: 100;
+  }
+  color: $primary-text-color;
+  padding: 1rem;
+}
+
+

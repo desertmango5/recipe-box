@@ -1,0 +1,40 @@
+/* SITE MENU */
+.menu {
+  display: flex;
+  height: 7rem;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 2px 8px #333;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid $purple;
+}
+
+.menu .site-title {
+  margin: 0;
+  padding: {
+    left: 2rem;
+  }
+  font: {
+    size: 3rem;
+    family: 'Changa', sans-serif;
+  }
+  color: $primary-text-color;
+  text-shadow: 2px 2px 5px $purple;
+}
+
+.menu > a {
+  color: $primary-text-color;
+  padding: {
+    right: 3rem;
+  }
+  font: {
+    size: 1.5rem;
+    weight: 100;
+  }
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  &:hover {
+    color: $menu-hover-color;
+    cursor: pointer;
+  }
+}

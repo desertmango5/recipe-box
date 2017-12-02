@@ -1,0 +1,16 @@
+/* HOME PAGE */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.welcome h1 {
+  font: {
+    size: 8rem;
+  }
+  color: #444;
+}
