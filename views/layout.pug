@@ -8,7 +8,10 @@ html
   body
     block header
       header.menu
-        a.site-title(href="/") Recipe Box
-        a(href="/new-recipe") New Recipe
+        .title
+          a.site-title(href="/") Recipe Box
+        .menu-items
+          a(href="/playground") Playground
+          a(href="/new-recipe") New Recipe
       
     block content

@@ -14,3 +14,15 @@
   }
   color: #444;
 }
+
+.welcome > h3 {
+  font: {
+    size: 2rem;
+    weight: 600;
+  }
+  letter-spacing: 0.1rem;
+  padding: {
+    top: 2rem;
+  }
+  color: $purple;
+}

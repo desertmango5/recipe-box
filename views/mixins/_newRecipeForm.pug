@@ -1,12 +1,16 @@
-mixin newRecipeForm
+mixin newRecipeForm(recipe = {})
   .form-container
     .form-title
       h3 Enter New Recipe ✏️
-      form.form-items(action="/create-new-recipe" method="POST")
+      form.form-items(action=`/new-recipe/${recipe.id || ''}` method="POST")
+        //- RECIPE TITLE/NAME
         label(for="title") Recipe Title
         input(type="text" name="title" placeholder="Enter your recipe title")
+        //- INGREDIENTS
         label(for="ingredients") Ingredients
         textarea(name="ingredients" placeholder="Enter your recipe's ingredients")
+        //- PREP/COOKING INSTRUCTIONS
         label(for="directions") Directions
         textarea(name="directions" placeholder="Enter your recipe's directions")
+        //- SAVE BUTTON
         input(type="submit" value="Save →" class="button")

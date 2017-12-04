@@ -9,7 +9,7 @@
   border-top: 5px solid $purple;
 }
 
-.menu .site-title {
+.title .site-title {
   margin: 0;
   padding: {
     left: 2rem;
@@ -20,9 +20,18 @@
   }
   color: $primary-text-color;
   text-shadow: 2px 2px 5px $purple;
+  text-decoration: none;
+  &:hover {
+    color: $menu-hover-color;
+  }
 }
 
-.menu > a {
+.menu-items {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-items > a {
   color: $primary-text-color;
   padding: {
     right: 3rem;
@@ -33,6 +42,7 @@
   }
   letter-spacing: 0.25rem;
   text-decoration: none;
+  align-self: center;
   &:hover {
     color: $menu-hover-color;
     cursor: pointer;
