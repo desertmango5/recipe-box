@@ -2,5 +2,11 @@ mixin newRecipeForm
   .form-container
     .form-title
       h3 Enter New Recipe ✏️
-    form.form-items(action="" method="POST")
-      textarea(name="ingredients" placeholder="Enter your recipe's ingredients here")
+      form.form-items(action="/create-new-recipe" method="POST")
+        label(for="title") Recipe Title
+        input(type="text" name="title" placeholder="Enter your recipe title")
+        label(for="ingredients") Ingredients
+        textarea(name="ingredients" placeholder="Enter your recipe's ingredients")
+        label(for="directions") Directions
+        textarea(name="directions" placeholder="Enter your recipe's directions")
+        input(type="submit" value="Save →" class="button")

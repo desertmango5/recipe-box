@@ -7,20 +7,89 @@
 
 .form-title {
   width: 75vw;
-  height: 75vh;
+  height: auto;
   background-color: $form-bg-color;
   border-radius: 0.5rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-title h3 {
   font: {
     size: 2rem;
+    weight: 300;
+  }
+  letter-spacing: 0.1rem;
+  color: $primary-text-color;
+  padding: 1rem;
+  border: {
+    bottom: 1px solid $purple;
+  }
+}
+
+.form-title > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font: {
+    size: 1.5rem;
     weight: 100;
   }
   color: $primary-text-color;
-  padding: 1rem;
+  width: 75%;
+  padding: {
+    top: 2rem;
+    bottom: 4rem;
+  } 
 }
 
+.form-title > form > label {
+  padding: {
+    top: 1.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+}
+    
+.form-title > form > input,
+.form-title > form > textarea {
+  border-radius: $border-radius-inputs;
+  padding: 0.5rem;
+  font: {
+    size: 1.5rem;
+  }
+  background-color: $input-bg-color;
+  box-shadow: 2px 2px 4px #555;
+}
 
+.form-items > input[placeholder],
+.form-items > textarea[placeholder] {
+  color: #777;
+  font: {
+    size: 1rem;
+    weight: 100;
+    family: 'Lato', sans-serif;
+  }
+  padding: {
+    left: 1rem;
+  }
+}
+
+.form-title > form > input.button {
+  background-color: $purple;
+  color: $primary-text-color;
+  font: {
+    weight: 200;
+  }
+  width: 50%;
+  margin: {
+    top: 2rem;
+  }
+  align-self: center;
+  opacity: 0.75;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
