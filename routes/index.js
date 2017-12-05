@@ -4,9 +4,10 @@ const router = express.Router();
 const recipeController = require('../controllers/recipeController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', recipeController.homePage);
+// router.get('/', recipeController.homePage);
 router.get('/new-recipe', recipeController.newRecipe);
 router.get('/playground', recipeController.playground);
+router.get('/', catchErrors(recipeController.getRecipes));
 
 router.post('/new-recipe', catchErrors(recipeController.createNewRecipe));
 

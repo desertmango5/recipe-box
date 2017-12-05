@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  font: {
+    size: 1rem;
+    weight: 100;
+  }
+  color: $purple;
+  text-shadow: 1px 1px $primary-text-color;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.credit {
+  margin: {
+    bottom: 0.5rem;
+  }
+  font: {
+    size: 1.25rem;
+    weight: 400;
+  }
+}

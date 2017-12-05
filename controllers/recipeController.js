@@ -23,3 +23,8 @@ exports.createNewRecipe = async (req, res) => {
   console.log('Your recipe was saved 😎');
   res.redirect('/');
 };
+
+exports.getRecipes = async (req, res) => {
+  const recipes = await Recipe.find();
+  res.render('getRecipes',  { recipes, title: 'Recipes' });
+};
