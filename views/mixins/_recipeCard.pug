@@ -8,4 +8,7 @@ mixin recipeCard(recipes)
         p.recipe-ing.recipe-info= `${recipe.ingredients}`
         h4.recipe-label Directions  
         p.recipe-dir.recipe-info= `${recipe.directions}`
-        p= `${recipe.categories}`
+        - const categories = recipe.categories
+        .recipe-cat
+          each category in categories
+            p= category
