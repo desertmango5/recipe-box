@@ -1,6 +1,21 @@
 const mongoose = require('mongoose');
 
 const Recipe = mongoose.model('Recipe');
+const multer = require('multer');
+const jimp = require('jimp');
+const uuid = require('uuid');
+
+const multerOptions = {
+  storage: multer.memoryStorage(),
+  fileFilter: function(req, res, next) {
+    const isPhoto = file.mimetype.startsWith('image/');
+    if (isPhoto) {
+      next(null, true);
+    } else {
+      next({ message: 'That filetype is not allowed' }, false);
+    }
+  }
+}
 
 exports.homePage = (req, res) => {
   res.render('index', { title: 'Home' });
@@ -28,3 +43,17 @@ exports.getRecipes = async (req, res) => {
   const recipes = await Recipe.find();
   res.render('getRecipes',  { recipes, title: 'Recipes' });
 };
+
+exports.upload = multer(multerOptions).single('photo');
+
+exports.resize = async (req, res, next) => {
+  if (!req.file) {
+    next();
+    return;
+  }
+  const extension = req.file.mimetype.split('/')[1];
+  req.body.photo = `${uuid.v4()}.${extension}`;
+  await photo.resize(800, jimp.AUTO);
+  await photo.write(`./public/uploads/${req.body.photo}`);
+  next();
+}

@@ -8,4 +8,5 @@ dist
 tmp
 .eslintrc.json
 *.log
+public/uploads/
 haters/

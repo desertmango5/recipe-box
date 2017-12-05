@@ -4,10 +4,7 @@ mixin recipeCard(recipes)
       .recipe-card__card
         h3.recipe-title= `${recipe.title}`
           hr#recipe-card
-        h4.recipe-label Ingredients  
-        p.recipe-ing.recipe-info= `${recipe.ingredients}`
-        h4.recipe-label Directions  
-        p.recipe-dir.recipe-info= `${recipe.directions}`
+        img(src=`/uploads/${recipe.photo}`, alt=`${recipe.title}` class="recipe-img")
         - const categories = recipe.categories
         .recipe-cat
           each category in categories
