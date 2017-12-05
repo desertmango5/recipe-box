@@ -20,5 +20,6 @@ exports.playground = (req, res) => {
 exports.createNewRecipe = async (req, res) => {
   const recipe = new Recipe(req.body);
   await recipe.save();
+  console.log('Your recipe was saved 😎');
   res.redirect('/');
 };

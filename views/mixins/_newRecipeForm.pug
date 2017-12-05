@@ -6,11 +6,21 @@ mixin newRecipeForm(recipe = {})
         //- RECIPE TITLE/NAME
         label(for="title") Recipe Title
         input(type="text" name="title" placeholder="Enter your recipe title")
+        //- GENERAL CATEGORIES
+        - const categories = ['Appetizer', 'Side', 'Main Dish', 'Dessert', 'Gluten-free', 'Keto']
+
+        ul.categories
+          each category in categories
+            .category__choice
+              input(type="checkbox" id=category value=category name="categories")
+              label(for=category)= category
         //- INGREDIENTS
         label(for="ingredients") Ingredients
         textarea(name="ingredients" placeholder="Enter your recipe's ingredients")
         //- PREP/COOKING INSTRUCTIONS
         label(for="directions") Directions
         textarea(name="directions" placeholder="Enter your recipe's directions")
+        //- USER GENERATED TAGS
+
         //- SAVE BUTTON
         input(type="submit" value="Save →" class="button")

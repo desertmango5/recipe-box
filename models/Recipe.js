@@ -21,7 +21,7 @@ const recipeSchema = new Schema({
     type: String,
     required: 'Don\'t forget the cooking instructions!',
   },
-  tags: [String],
+  categories: [String],
 });
 
 // autogenerate recipe slug from title
