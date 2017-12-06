@@ -8,6 +8,9 @@ const { catchErrors } = require('../handlers/errorHandlers');
 router.get('/new-recipe', recipeController.newRecipe);
 router.get('/playground', recipeController.playground);
 router.get('/', catchErrors(recipeController.getRecipes));
+// router.get('/categories', catchErrors(recipeController.categories));
+router.get('/categories', catchErrors(recipeController.getCategoriesList));
+router.get('/categories/:cat', catchErrors(recipeController.getCategoriesList));
 
 router.post('/new-recipe', catchErrors(recipeController.createNewRecipe));
 

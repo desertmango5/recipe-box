@@ -1,0 +1,13 @@
+extends layout
+
+include mixins/_recipeCard
+
+block content
+  //- buttons for sorting by category
+  .recipe-cat__sort
+    each category in cats
+      .recipe-cat__button
+        a(href=`/categories/${category._id}`)= category._id
+        p.recipe-cat__count= category.count
+  +recipeCard(recipes)
+  

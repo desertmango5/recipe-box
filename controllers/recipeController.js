@@ -44,6 +44,20 @@ exports.getRecipes = async (req, res) => {
   res.render('getRecipes',  { recipes, title: 'Recipes' });
 };
 
+// exports.categories = async (req, res) => {
+//   const recipes = await Recipe.find();
+//   res.render('categories', { recipes, title: 'Categories' });
+// };
+
+exports.getCategoriesList = async (req, res) => {
+  const cat = req.params.cat;
+  const catQuery = cat || { $exists: true };
+  const catsPromise = Recipe.getCategoriesList();
+  const recipesPromise = Recipe.find({ categories: catQuery });
+  const [cats, recipes] = await Promise.all([catsPromise, recipesPromise]);
+  res.render('categories', { cats, title: 'Categories', cat, recipes });
+};
+
 exports.upload = multer(multerOptions).single('photo');
 
 exports.resize = async (req, res, next) => {

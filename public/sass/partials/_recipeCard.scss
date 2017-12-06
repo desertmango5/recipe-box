@@ -10,7 +10,7 @@
   display: flex;
   background-color: $recipe-card-bg;
   color: $primary-text-color;
-  height: 300px;
+  max-height: 325px;
   width: 300px;
   flex-direction: column;
   padding: 2rem;

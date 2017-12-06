@@ -36,6 +36,14 @@ recipeSchema.pre('save', function (next) {
   // TODO make sure all slugs are unique
 });
 
+recipeSchema.statics.getCategoriesList = function () {
+  return this.aggregate([
+    { $unwind: '$categories' },
+    { $group: { _id: '$categories', count: { $sum: 1 } } },
+    { $sort: { count: -1 } },
+  ]);
+};
+
 // user-friendly error messages
 recipeSchema.plugin(mongodbErrorHandler);
 
