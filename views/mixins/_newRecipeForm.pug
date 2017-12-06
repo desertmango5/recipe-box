@@ -7,7 +7,7 @@ mixin newRecipeForm(recipe = {})
         label(for="title") Recipe Title
         input(type="text" name="title" placeholder="Enter your recipe title")
         //- GENERAL CATEGORIES
-        - const categories = ['Appetizer', 'Side', 'Main Dish', 'Dessert', 'Gluten-free', 'Keto']
+        - const categories = h.categories
 
         ul.categories
           each category in categories
@@ -24,7 +24,7 @@ mixin newRecipeForm(recipe = {})
 
         //- PHOTO UPLOAD
         label(for="photo") Photo
-          input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg, image/jpg")
+        input(class="photo-input" type="file" name="photo" accept="image/gif, image/png, image/jpeg, image/jpg")
 
         //- SAVE BUTTON
         input(type="submit" value="Save →" class="button")

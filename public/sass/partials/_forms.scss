@@ -71,7 +71,7 @@
     size: 1.5rem;
   }
   background-color: $input-bg-color;
-  box-shadow: 2px 2px 4px #555;
+  box-shadow: $shadow;
 }
 
 .form-items > input[placeholder],
@@ -127,7 +127,7 @@
   }
   color: $purple;
   border-radius: 0.25rem;
-  box-shadow: 2px 2px 4px #555;
+  box-shadow: $shadow;
   display: flex;
   align-items: center;
   &:hover {
@@ -148,4 +148,13 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.photo-input {
+  color: #777;
+  font: {
+    size: 0.5rem;
+    weight: 100;
+  }
+  box-shadow: $shadow;
 }

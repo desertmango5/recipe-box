@@ -16,6 +16,7 @@
   padding: 2rem;
   margin: 1rem;
   border-radius: 0.5rem;
+  box-shadow: $shadow;
 }
 
 /* change color of hr dividing line */
@@ -23,6 +24,7 @@
   color: $purple;
 }
 
+/* RECIPE CARDS */
 .recipe-title {
   font: {
     size: 2rem;
@@ -63,7 +65,7 @@
   margin: {
     right: 0.1rem;
     left: 0.1rem;
-    top: 0.5rem;
+    top: 0.75rem;
   }
   border-radius: 0.15rem;
 }

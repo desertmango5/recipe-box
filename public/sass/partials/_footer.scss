@@ -6,7 +6,7 @@
   }
   color: $purple;
   text-shadow: 1px 1px $primary-text-color;
-  height: 5rem;
+  height: 10rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -14,7 +14,8 @@
 
 .credit {
   margin: {
-    bottom: 0.5rem;
+    top: 2rem;
+    bottom: 0.75rem;
   }
   font: {
     size: 1.25rem;
